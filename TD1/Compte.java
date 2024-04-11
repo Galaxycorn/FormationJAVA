@@ -21,7 +21,7 @@ public abstract class Compte {
     }
 
     public void retirer(double valeur) {
-        if (this.getSolde() < decouvert)
+        if (this.getSolde() - valeur < decouvert)
             System.out.println("Vous dépasser votre découvert autorisé");
         else {
             this.setSolde(this.getSolde() - valeur - this.getInteret());
@@ -30,7 +30,7 @@ public abstract class Compte {
     }
 
     public void verser(Compte compte, double valeur) {
-        if (this.getSolde() < decouvert)
+        if (this.getSolde() - valeur < decouvert)
             System.out.println("Vous dépasser votre découvert autorisé");
         else {
             compte.setSolde(compte.getSolde() + valeur - compte.getInteret());

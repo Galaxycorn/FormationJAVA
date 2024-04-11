@@ -14,7 +14,7 @@ class Main {
         System.out.println(comptePayant.toString());
         System.out.println(comptePremium.toString());
 
-        compteSimple.verser(comptePremium, 1000);
+        compteSimple.verser(comptePremium, 10000000);
         System.out.println(compteSimple.toString());
         System.out.println(comptePremium.toString());
 
