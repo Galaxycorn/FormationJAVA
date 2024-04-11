@@ -4,9 +4,10 @@ public abstract class Compte {
 
     private static int nextCode;
     private int code;
-    private static int sommeInteret;
+    protected static int sommeInteret;
+    private static int nombreOperation;
     private int interet;
-    protected double solde;
+    private double solde;
     private int decouvert;
     EnumCarte carte;
 
@@ -24,15 +25,21 @@ public abstract class Compte {
         if (this.getSolde() - valeur < decouvert)
             System.out.println("Vous dépasser votre découvert autorisé");
         else {
+            nombreOperation++;
             this.setSolde(this.getSolde() - valeur - this.getInteret());
             sommeInteret += this.getInteret();
         }
     }
 
-    public void verser(Compte compte, double valeur) {
+    public void verser(double valeur) {
+        this.setSolde(this.getSolde() + valeur);
+    }
+
+    public void verserCompte(Compte compte, double valeur) {
         if (this.getSolde() - valeur < decouvert)
             System.out.println("Vous dépasser votre découvert autorisé");
         else {
+            nombreOperation++;
             compte.setSolde(compte.getSolde() + valeur - compte.getInteret());
             this.setSolde(this.getSolde() - valeur - this.getInteret());
             sommeInteret += interet * 2;
@@ -46,6 +53,10 @@ public abstract class Compte {
 
     public static String sommeBanque() {
         return String.valueOf(sommeInteret);
+    }
+
+    public static String nombreOperation() {
+        return String.valueOf(nombreOperation);
     }
 
     public double getSolde() {
