@@ -1,8 +1,4 @@
-import TD1.Compte;
-import TD1.ComptePayant;
-import TD1.ComptePremium;
-import TD1.CompteSimple;
-import TD1.EnumCarte;
+package TD1;
 
 class Main {
 
