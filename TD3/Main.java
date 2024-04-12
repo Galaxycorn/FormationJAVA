@@ -28,6 +28,12 @@ public class Main {
         System.out.println(bibliotheque.rechercherDisque("Mathis"));
         System.out.println("_________________________");
         System.out.println(bibliotheque.rechercherChansons("Mathis"));
+        System.out.println("_________________________");
+        System.out.println("Il y a " + bibliotheque.getNbDisques() + " disque(s) dans la bibliothèque");
+        System.out.println("_________________________");
+        System.out.println(bibliotheque.getDisque("6942"));
+        System.out.println("_________________________");
+        System.out.println(bibliotheque.retirerDisque("6942"));
     }
 
 }
