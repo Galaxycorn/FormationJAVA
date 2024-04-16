@@ -28,6 +28,10 @@ public class Disque {
         return sum;
     }
 
+    public int getDureeStream() {
+        return chansons.stream().mapToInt(Chanson::getDuree).sum();
+    }
+
     public String getNom() {
         return this.nom;
     }

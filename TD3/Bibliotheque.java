@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class Bibliotheque {
 
@@ -53,6 +55,11 @@ public class Bibliotheque {
         return casse;
     }
 
+    public List<Disque> rechercherDisquesStream(String recherche) {
+        return disques.stream().filter(disque -> disque.getNom().toLowerCase().contains(recherche.toLowerCase()))
+                .collect(Collectors.toList());
+    }
+
     public List<Chanson> rechercherChansons(String recherche) {
         List<Chanson> casse = new ArrayList<>();
         for (Disque disque : disques) {
@@ -62,6 +69,13 @@ public class Bibliotheque {
             }
         }
         return casse;
+    }
+
+    public List<Chanson> rechercherChansonsStream(String recherche) {
+        return disques.stream().flatMap(disque -> disque.getChansons().stream())
+                .filter(chanson -> chanson.getNom().toUpperCase()
+                        .contains(recherche.toUpperCase()))
+                .collect(Collectors.toList());
     }
 
     /**
