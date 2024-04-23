@@ -1,7 +1,11 @@
 package com.repositories.implementation;
 
+import com.repositories.interfaces.DaoAdresse;
 import com.repositories.interfaces.DaoCategorie;
 import com.repositories.interfaces.DaoClient;
+import com.repositories.interfaces.DaoCommande;
+import com.repositories.interfaces.DaoFournisseur;
+import com.repositories.interfaces.DaoLigneCommande;
 import com.repositories.interfaces.DaoPersonne;
 import com.repositories.interfaces.DaoProduit;
 
@@ -16,6 +20,10 @@ public class JpaContext {
     private static DaoClient daoClient = null;
     private static DaoProduit daoProduit = null;
     private static DaoPersonne daoPersonne = null;
+    private static DaoAdresse daoAdresse = null;
+    private static DaoCommande daoCommande = null;
+    private static DaoFournisseur daoFournisseur = null;
+    private static DaoLigneCommande daoLigneCommande = null;
 
     // création sous la forme d'un object unique
     public static EntityManagerFactory getEntityManagerFactory() {
@@ -53,6 +61,32 @@ public class JpaContext {
         return daoPersonne;
     }
 
-    // fermeture
+    public static DaoAdresse getDaoAdresse() {
+        if (daoAdresse == null) {
+            daoAdresse = new DaoAdresseImpl();
+        }
+        return daoAdresse;
+    }
+
+    public static DaoCommande getDaoCommande() {
+        if (daoCommande == null) {
+            daoCommande = new DaoCommandeImpl();
+        }
+        return daoCommande;
+    }
+
+    public static DaoFournisseur getDaoFournisseur() {
+        if (daoFournisseur == null) {
+            daoFournisseur = new DaoFournisseurImpl();
+        }
+        return daoFournisseur;
+    }
+
+    public static DaoLigneCommande getLigneCommande() {
+        if (daoLigneCommande == null) {
+            daoLigneCommande = new DaoLigneCommandeImpl();
+        }
+        return daoLigneCommande;
+    }
 
 }

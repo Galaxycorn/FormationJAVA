@@ -2,8 +2,6 @@ package com.entities;
 
 import java.util.*;
 
-import com.mysql.cj.xdevapi.AddResult;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

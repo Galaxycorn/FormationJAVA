@@ -7,9 +7,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "Produit")
@@ -32,9 +34,8 @@ public class Produit {
     @Column(name = "produit_photo")
     private Byte[] photo;
 
-    @ManyToOne
-    @JoinColumn(name = "ligne_commande_id")
-    private LigneCommande ligneCommande;
+    @OneToMany(mappedBy = "produit")
+    private Set<LigneCommande> ligneCommandes;
 
     @ManyToOne
     @JoinColumn(name = "fournisseur_id")
@@ -93,12 +94,12 @@ public class Produit {
         this.photo = photo;
     }
 
-    public LigneCommande getLigneCommande() {
-        return this.ligneCommande;
+    public Set<LigneCommande> getLigneCommande() {
+        return this.ligneCommandes;
     }
 
-    public void setLigneCommande(LigneCommande ligneCommande) {
-        this.ligneCommande = ligneCommande;
+    public void setLigneCommande(Set<LigneCommande> ligneCommandes) {
+        this.ligneCommandes = ligneCommandes;
     }
 
     public Fournisseur getFournisseur() {

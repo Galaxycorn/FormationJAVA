@@ -1,8 +1,8 @@
 package com.entities;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
@@ -12,9 +12,8 @@ import java.util.Objects;
 @Table(name = "LigneCommande")
 public class LigneCommande {
 
-    @Id
-    @Column(name = "ligne_commande_id")
-    private Long id;
+    @EmbeddedId
+    private LigneCommandeId ligneCommandeId;
 
     @Column(name = "ligne_quantite")
     private int quantite;
@@ -23,20 +22,24 @@ public class LigneCommande {
     @JoinColumn(name = "commande_id")
     private Commande commande;
 
+    @ManyToOne
+    @JoinColumn(name = "produit_id")
+    private Produit produit;
+
     public LigneCommande() {
     }
 
-    public LigneCommande(Long id, int quantite) {
-        this.id = id;
+    public LigneCommande(LigneCommandeId ligneCommandeId, int quantite) {
+        this.ligneCommandeId = ligneCommandeId;
         this.quantite = quantite;
     }
 
-    public Long getId() {
-        return this.id;
+    public LigneCommandeId getId() {
+        return this.ligneCommandeId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(LigneCommandeId ligneCommandeId) {
+        this.ligneCommandeId = ligneCommandeId;
     }
 
     public int getQuantite() {
@@ -55,6 +58,14 @@ public class LigneCommande {
         this.commande = commande;
     }
 
+    public Produit getProduit() {
+        return this.produit;
+    }
+
+    public void setProduit(Produit produit) {
+        this.produit = produit;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == this)
@@ -63,12 +74,12 @@ public class LigneCommande {
             return false;
         }
         LigneCommande ligneCommande = (LigneCommande) o;
-        return Objects.equals(id, ligneCommande.id);
+        return Objects.equals(ligneCommandeId, ligneCommande.ligneCommandeId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(ligneCommandeId);
     }
 
     @Override

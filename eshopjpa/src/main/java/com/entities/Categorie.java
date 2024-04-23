@@ -3,6 +3,7 @@ package com.entities;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -11,9 +12,8 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "Catégorie")
@@ -27,15 +27,15 @@ public class Categorie {
     @Column(name = "categorie_nom", nullable = false, length = 100)
     String nom;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_id")
     private Categorie parent;
 
-    @OneToMany(mappedBy = "parent")
-    private List<Categorie> children = new ArrayList<>();
+    @OneToMany(mappedBy = "parent", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Set<Categorie> children;
 
     @OneToMany(mappedBy = "categorie", cascade = CascadeType.ALL)
-    private List<Produit> produits;
+    private Set<Produit> produits;
 
     public Categorie() {
     }
@@ -69,19 +69,19 @@ public class Categorie {
         this.parent = parent;
     }
 
-    public List<Categorie> getChildren() {
+    public Set<Categorie> getChildren() {
         return this.children;
     }
 
-    public void setChildren(List<Categorie> children) {
+    public void setChildren(Set<Categorie> children) {
         this.children = children;
     }
 
-    public List<Produit> getProduits() {
+    public Set<Produit> getProduits() {
         return this.produits;
     }
 
-    public void setProduits(List<Produit> produits) {
+    public void setProduits(Set<Produit> produits) {
         this.produits = produits;
     }
 

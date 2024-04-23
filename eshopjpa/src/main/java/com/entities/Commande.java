@@ -2,7 +2,6 @@ package com.entities;
 
 import java.time.LocalDate;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,9 +12,8 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "Commande")
@@ -33,8 +31,8 @@ public class Commande {
     @Column(name = "commande_date")
     private LocalDate date;
 
-    @OneToMany(mappedBy = "commande", cascade = CascadeType.ALL)
-    private List<LigneCommande> ligneCommandes = new ArrayList<>();
+    @OneToMany(mappedBy = "commande")
+    private Set<LigneCommande> ligneCommandes;
 
     public Commande() {
     }
@@ -69,11 +67,11 @@ public class Commande {
         this.date = date;
     }
 
-    public List<LigneCommande> getLigneCommandes() {
+    public Set<LigneCommande> getLigneCommandes() {
         return this.ligneCommandes;
     }
 
-    public void setLigneCommandes(List<LigneCommande> ligneCommandes) {
+    public void setLigneCommandes(Set<LigneCommande> ligneCommandes) {
         this.ligneCommandes = ligneCommandes;
     }
 
