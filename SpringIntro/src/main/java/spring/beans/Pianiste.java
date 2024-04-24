@@ -1,10 +1,15 @@
 package spring.beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import spring.interfaces.Instrument;
 import spring.interfaces.Musicien;
 
 public class Pianiste implements Musicien {
 
+    @Autowired
+    @Qualifier("piano")
     Instrument instrument;
 
     public Pianiste() {
