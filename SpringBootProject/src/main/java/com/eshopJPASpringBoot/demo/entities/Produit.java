@@ -53,8 +53,25 @@ public class Produit {
         this.nom = nom;
         this.prix = prix;
     }
+    
 
-    public Long getNumero() {
+    public Produit(String nom, double prix, String description) {
+		this.nom = nom;
+		this.prix = prix;
+		this.description = description;
+	}
+
+	public Produit(String nom, double prix, String description, Byte[] photo, Fournisseur fournisseur,
+			Categorie categorie) {
+		this.nom = nom;
+		this.prix = prix;
+		this.description = description;
+		this.photo = photo;
+		this.fournisseur = fournisseur;
+		this.categorie = categorie;
+	}
+
+	public Long getNumero() {
         return this.numero;
     }
 
