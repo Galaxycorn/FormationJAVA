@@ -2,6 +2,7 @@ XML/
 #maven
 #dossier /target pas besoin de le traiter
 target/
+eshopjpa/
 .idea/
 #eclipse
 .classpath
