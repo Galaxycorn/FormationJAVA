@@ -1,4 +1,4 @@
-package com.repositories;
+package com.eshopJPASpringBoot.demo.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
