@@ -12,6 +12,8 @@ import java.util.Optional;
 public interface DaoProduit extends JpaRepository<Produit, Integer> {
 
     List<Produit> findByNomContaining(String nom);
+    
+    Produit findByNumero(Long numero);
 
     List<Produit> findByFournisseur(Fournisseur fournisseur);
 
