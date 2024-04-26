@@ -24,7 +24,7 @@ public class Adresse {
     @Column(name = "adresse_rue")
     private String rue;
 
-    @Column(name = "adresse_codePostal")
+    @Column(name = "adresse_code_postal")
     private String codePostal;
 
     @Column(name = "adresse_ville")

@@ -46,6 +46,11 @@ public class Client extends Personne {
         this.adresse = adresse;
     }
 
+    public Client(String prenom, String nom) {
+        this.prenom = prenom;
+        this.nom = nom;
+    }
+
     public int getId() {
         return this.id;
     }

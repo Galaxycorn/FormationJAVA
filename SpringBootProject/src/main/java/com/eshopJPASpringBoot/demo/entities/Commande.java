@@ -37,8 +37,7 @@ public class Commande {
     public Commande() {
     }
 
-    public Commande(Long id, Client client, LocalDate date) {
-        this.id = id;
+    public Commande(Client client, LocalDate date) {
         this.client = client;
         this.date = date;
     }
