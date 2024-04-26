@@ -6,14 +6,20 @@ import org.springframework.stereotype.Service;
 import com.eshopJPASpringBoot.demo.entities.Categorie;
 import com.eshopJPASpringBoot.demo.entities.Fournisseur;
 import com.eshopJPASpringBoot.demo.entities.Produit;
+import com.eshopJPASpringBoot.demo.exceptions.ReferenceNullException;
 import com.eshopJPASpringBoot.demo.repositories.DaoProduit;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Service
 public class ProduitService {
+	
+	 private Logger logger = LoggerFactory.getLogger(ProduitService.class);
+	 
 	 @Autowired
 	    private DaoProduit daoProduit;
 	 
-	 public Produit creationProduit(String nom, Double prix, String description, Byte[] photo, Fournisseur fournisseur,  Categorie categorie) {
+	 public Produit creationProduit(String nom, Double prix, String description, String photo, Fournisseur fournisseur,  Categorie categorie) {
 		 if (prix > 0) {
 			   return creationProduit(new Produit(nom, prix, description, photo, fournisseur,categorie));
 		 }
@@ -33,46 +39,54 @@ public class ProduitService {
         return daoProduit.save(produit);
 
      }
-     public Produit updateProduit(Long numero, String nom, Double prix, String description, Byte[] photo, Fournisseur fournisseur,  Categorie categorie) {
+     public void updateProduit(Long numero, String nom, Double prix, String description, String photo, Fournisseur fournisseur,  Categorie categorie) {
          Produit produit = daoProduit.findByNumero(numero);
-         if (produit != null) {
+         if (produit == null) {
+             throw new ReferenceNullException();
+         }
+         else{
         	 produit.setNom(nom);
         	 produit.setPrix(prix);
         	 produit.setDescription(description);
         	 produit.setPhoto(photo);
         	 produit.setFournisseur(fournisseur);
         	 produit.setCategorie(categorie);
-             return daoProduit.save(produit);
+             daoProduit.save(produit);
          }
-         return null; 
+         logger.info("Update produit :" + produit);
+        
      }
-     
-     public Produit updateProduit(Produit produit) {
+     public void updateProduit(Produit produit) {
          if (produit == null) {
              throw new ReferenceNullException();
          }
-         daoProduit.findById(produit.getByNumero()).ifPresent(clientUpdated -> {
-             clientUpdated.setAdresse(client.getAdresse());
-             clientUpdated.setCommandes(client.getCommandes());
-             clientUpdated.setMail(client.getMail());
-             clientUpdated.setNom(client.getNom());
-             clientUpdated.setPrenom(client.getPrenom());
-             clientUpdated.setTelephone(client.getTelephone());
+         daoProduit.findById(produit.getNumero().intValue()).ifPresent(produitUpdated -> {
+        	 produitUpdated.setNom(produit.getNom());
+        	 produitUpdated.setPrix(produit.getPrix());
+        	 produitUpdated.setDescription(produit.getDescription());
+        	 produitUpdated.setPhoto(produit.getPhoto());
+        	 produitUpdated.setFournisseur(produit.getFournisseur());
+        	 produitUpdated.setCategorie(produit.getCategorie());
 
-             daoClient.save(clientUpdated);
+        	 daoProduit.save(produitUpdated);
          });
-         logger.info("Update client :" + client);
+         logger.info("Update produit :" + produit);
+	
      }
 
- return daoClient.findById(id).orElseThrow(() -> {
-             throw new NotFoundException("client " + id + "inexistant");
-         });
-     public void delete(Long numero) {
+     
+     public void deleteProduit(Long numero) {
     	if (numero != null) {
     		 daoProduit.deleteById(numero);
  		}
        
      }
+     public void deleteProduit(Produit produit) {
+     	if (produit != null) {
+     		 daoProduit.deleteById(produit.getNumero());
+  		}
+        
+      }
      public Produit findByNumero(Long code) {
  		if (code != null) {
  			return daoProduit.findByNumero(code);

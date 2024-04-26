@@ -61,7 +61,7 @@ public class Produit {
 		this.description = description;
 	}
 
-	public Produit(String nom, double prix, String description, Byte[] photo, Fournisseur fournisseur,
+	public Produit(String nom, double prix, String description, String photo, Fournisseur fournisseur,
 			Categorie categorie) {
 		this.nom = nom;
 		this.prix = prix;
