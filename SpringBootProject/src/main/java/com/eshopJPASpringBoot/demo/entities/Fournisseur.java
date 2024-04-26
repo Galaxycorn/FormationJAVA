@@ -16,22 +16,19 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "Fournisseur")
-public class Fournisseur {
+public class Fournisseur extends Personne{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "fournisseur_id")
-    private Long id;
+    private Integer id;
 
     @Column(name = "founisseur_nom")
-    private String nom;
+    private String nomFournisseur;
 
     @OneToMany(mappedBy = "fournisseur", fetch = FetchType.LAZY)
     private List<Produit> produits;
 
-    @OneToOne
-    @JoinColumn(name = "personne_id")
-    private Personne personne;
 
     @OneToOne()
     @JoinColumn(name = "adresse_id")
@@ -40,27 +37,26 @@ public class Fournisseur {
     public Fournisseur() {
     }
 
-    public Fournisseur(String nom, List<Produit> produits, Personne personne, Adresse adresse) {
-        this.nom = nom;
+    public Fournisseur(String nomFournisseur, List<Produit> produits, Adresse adresse) {
+        this.nomFournisseur = nomFournisseur;
         this.produits = produits;
-        this.personne = personne;
         this.adresse = adresse;
     }
 
-    public Long getId() {
+    public Integer getFournisseurId() {
         return this.id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getNom() {
-        return this.nom;
+    public String getNomFournisseur() {
+        return this.nomFournisseur;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setNomFournisseur(String nom) {
+        this.nomFournisseur = nom;
     }
 
     public List<Produit> getProduits() {
@@ -69,14 +65,6 @@ public class Fournisseur {
 
     public void setProduits(List<Produit> produits) {
         this.produits = produits;
-    }
-
-    public Personne getPersonne() {
-        return this.personne;
-    }
-
-    public void setPersonne(Personne personne) {
-        this.personne = personne;
     }
 
     public Adresse getAdresse() {
@@ -95,23 +83,22 @@ public class Fournisseur {
             return false;
         }
         Fournisseur fournisseur = (Fournisseur) o;
-        return Objects.equals(id, fournisseur.id) && Objects.equals(nom, fournisseur.nom)
-                && Objects.equals(produits, fournisseur.produits) && Objects.equals(personne, fournisseur.personne)
+        return Objects.equals(id, fournisseur.id) && Objects.equals(nomFournisseur, fournisseur.nomFournisseur)
+                && Objects.equals(produits, fournisseur.produits)
                 && Objects.equals(adresse, fournisseur.adresse);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nom, produits, personne, adresse);
+        return Objects.hash(id, nomFournisseur, produits,adresse);
     }
 
     @Override
     public String toString() {
         return "{" +
-                " id='" + getId() + "'" +
+                " id='" + getFournisseurId() + "'" +
                 ", nom='" + getNom() + "'" +
                 ", produits='" + getProduits() + "'" +
-                ", personne='" + getPersonne() + "'" +
                 ", adresse='" + getAdresse() + "'" +
                 "}";
     }

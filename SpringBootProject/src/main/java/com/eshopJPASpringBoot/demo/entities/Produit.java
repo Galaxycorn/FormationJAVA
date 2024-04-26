@@ -32,7 +32,7 @@ public class Produit {
     private String description;
 
     @Column(name = "produit_photo")
-    private Byte[] photo;
+    private String photo;
 
     @OneToMany(mappedBy = "produit")
     private Set<LigneCommande> ligneCommandes;
@@ -86,11 +86,11 @@ public class Produit {
         this.description = description;
     }
 
-    public Byte[] getPhoto() {
+    public String getPhoto() {
         return this.photo;
     }
 
-    public void setPhoto(Byte[] photo) {
+    public void setPhoto(String photo) {
         this.photo = photo;
     }
 
