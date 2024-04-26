@@ -40,8 +40,7 @@ public class Fournisseur {
     public Fournisseur() {
     }
 
-    public Fournisseur(Long id, String nom, List<Produit> produits, Personne personne, Adresse adresse) {
-        this.id = id;
+    public Fournisseur(String nom, List<Produit> produits, Personne personne, Adresse adresse) {
         this.nom = nom;
         this.produits = produits;
         this.personne = personne;
