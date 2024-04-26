@@ -40,8 +40,7 @@ public class Categorie {
     public Categorie() {
     }
 
-    public Categorie(Long id, String nom) {
-        this.id = id;
+    public Categorie( String nom) {
         this.nom = nom;
     }
 
