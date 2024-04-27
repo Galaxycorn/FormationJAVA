@@ -33,8 +33,7 @@ public class Adresse {
     public Adresse() {
     }
 
-    public Adresse(Long id, String numero, String rue, String codePostal, String ville) {
-        this.id = id;
+    public Adresse(String numero, String rue, String codePostal, String ville) {
         this.numero = numero;
         this.rue = rue;
         this.codePostal = codePostal;

@@ -37,9 +37,15 @@ public class Commande {
     public Commande() {
     }
 
-    public Commande(Client client, LocalDate date) {
+    public Commande(Client client) {
         this.client = client;
-        this.date = date;
+        this.date = LocalDate.now();
+    }
+
+    public Commande(Client client, Set<LigneCommande> ligneCommandes) {
+        this.client = client;
+        this.date = LocalDate.now();
+        this.ligneCommandes = ligneCommandes;
     }
 
     public Long getId() {

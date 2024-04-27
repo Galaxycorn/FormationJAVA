@@ -34,6 +34,11 @@ public class LigneCommande {
         this.quantite = quantite;
     }
 
+    public LigneCommande(Produit produit, int quantite) {
+        this.produit = produit;
+        this.quantite = quantite;
+    }
+
     public LigneCommandeId getId() {
         return this.ligneCommandeId;
     }

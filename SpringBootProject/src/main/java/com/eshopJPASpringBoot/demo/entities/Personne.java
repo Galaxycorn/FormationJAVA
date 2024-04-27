@@ -21,13 +21,13 @@ public class Personne {
     private int id;
 
     @Column(name = "personne_nom")
-    private String nom;
+    protected String nom;
 
     @Column(name = "personne_mail")
-    private String mail;
+    protected String mail;
 
     @Column(name = "personne_telephone")
-    private String telephone;
+    protected String telephone;
 
     public int getId() {
         return this.id;

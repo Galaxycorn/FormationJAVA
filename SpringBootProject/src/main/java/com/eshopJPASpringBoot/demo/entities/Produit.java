@@ -48,8 +48,7 @@ public class Produit {
     public Produit() {
     }
 
-    public Produit(Long numero, String nom, double prix) {
-        this.numero = numero;
+    public Produit(String nom, double prix) {
         this.nom = nom;
         this.prix = prix;
     }

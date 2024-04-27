@@ -25,9 +25,6 @@ public class Client extends Personne {
     @Column(name = "client_prenom")
     String prenom;
 
-    @Column(name = "client_nom")
-    String nom;
-
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
     private List<Commande> commandes = new ArrayList<>();
 
@@ -39,10 +36,20 @@ public class Client extends Personne {
 
     }
 
-    public Client(String prenom, String nom, List<Commande> commandes, Adresse adresse) {
+    public Client(String prenom, String nom, String telephone, String mail, List<Commande> commandes, Adresse adresse) {
         this.prenom = prenom;
         this.nom = nom;
+        this.telephone = telephone;
+        this.mail = mail;
         this.commandes = commandes;
+        this.adresse = adresse;
+    }
+
+    public Client(String prenom, String nom, String telephone, String mail, Adresse adresse) {
+        this.prenom = prenom;
+        this.nom = nom;
+        this.telephone = telephone;
+        this.mail = mail;
         this.adresse = adresse;
     }
 

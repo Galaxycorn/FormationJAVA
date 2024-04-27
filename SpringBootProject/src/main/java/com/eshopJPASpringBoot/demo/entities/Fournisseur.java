@@ -95,7 +95,8 @@ public class Fournisseur {
             return false;
         }
         Fournisseur fournisseur = (Fournisseur) o;
-        return Objects.equals(id, fournisseur.id) && Objects.equals(nom, fournisseur.nom)
+        return Objects.equals(id, fournisseur.id) && Objects.equals(
+                nom, fournisseur.nom)
                 && Objects.equals(produits, fournisseur.produits) && Objects.equals(personne, fournisseur.personne)
                 && Objects.equals(adresse, fournisseur.adresse);
     }

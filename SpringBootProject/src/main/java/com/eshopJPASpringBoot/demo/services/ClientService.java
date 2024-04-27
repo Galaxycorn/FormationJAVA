@@ -24,12 +24,14 @@ public class ClientService {
     @Autowired
     private DaoClient daoClient;
 
-    public Client creationClient(String prenom, String nom, List<Commande> commandes, Adresse adresse) {
-        return creationClient(new Client(prenom, nom, commandes, adresse));
+    public Client creationClient(String prenom, String nom, String telephone, String mail, List<Commande> commandes,
+            Adresse adresse) {
+        return creationClient(new Client(prenom, nom, telephone, mail, commandes, adresse));
     }
 
     public Client creationClient(String prenom, String nom) {
         Client client = new Client();
+        client.setPrenom(prenom);
         client.setNom(nom);
         logger.info("Création client :" + client);
         return creationClient(client);
@@ -90,6 +92,7 @@ public class ClientService {
     public List<Client> getClientNom(String nom) {
         if (nom == null || nom.isBlank())
             throw new ReferenceNullException();
+        logger.debug("debug nom" + nom);
         return daoClient.findByNomContaining(nom);
     }
 
@@ -99,6 +102,12 @@ public class ClientService {
         return daoClient.findById(id).orElseThrow(() -> {
             throw new NotFoundException("client " + id + "inexistant");
         });
+    }
+
+    public List<Client> getClientAdresse(String ville) {
+        if (ville == null || ville.isBlank())
+            throw new ReferenceNullException();
+        return daoClient.findByVille(ville);
     }
 
     public Optional<Client> getClientIdFetch(Integer id) {

@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 import java.time.LocalDate;
 
-public interface DaoCommande extends JpaRepository<Commande, Integer> {
+public interface DaoCommande extends JpaRepository<Commande, Long> {
 
     List<Commande> findByDate(LocalDate date);
 
