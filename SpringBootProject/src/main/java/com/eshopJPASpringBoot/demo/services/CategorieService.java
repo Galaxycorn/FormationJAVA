@@ -41,18 +41,18 @@ public class CategorieService {
         return daoCategorie.save(categorie);
     }
     // → suppression
-    public void delete(Integer code) {
+    public void delete(Long code) {
 		if (code == null) {
 			throw new ReferenceNullException();
 		}
-        Optional<Categorie> categorieSuprimer = daoCategorie.findById(code);
+        Optional<Categorie> categorieSuprimer = daoCategorie.findById(code.intValue());
         logger.debug("suprression de " + categorieSuprimer.hashCode());
-        daoCategorie.deleteById(code);
+        daoCategorie.deleteById(code.intValue());
 	}
     // → Recherche de toutes les catégories, id
-     public Categorie findById(Integer integer){
-        return daoCategorie.findById(integer).orElseThrow(() -> {
-			throw new NotFoundException("categorie avec l'id  " + integer + " inexistant");
+     public Categorie findById(Long id){
+        return daoCategorie.findById(id.intValue()).orElseThrow(() -> {
+			throw new NotFoundException("categorie avec l'id  " + id + " inexistant");
 		});
     }
     public List<Categorie> getAll(){
