@@ -21,7 +21,7 @@ public class Fournisseur extends Personne {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "fournisseur_id")
-    private Integer id;
+    private int id;
 
     @Column(name = "founisseur_nom")
     private String nomFournisseur;

@@ -18,7 +18,7 @@ import jakarta.persistence.Table;
 public class Client extends Personne {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "client_id")
     int id;
 

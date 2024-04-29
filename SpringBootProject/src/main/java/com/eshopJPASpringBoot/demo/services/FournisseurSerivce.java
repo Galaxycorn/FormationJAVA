@@ -12,10 +12,10 @@ import org.springframework.stereotype.Service;
 import com.eshopJPASpringBoot.demo.entities.Adresse;
 import com.eshopJPASpringBoot.demo.entities.Fournisseur;
 import com.eshopJPASpringBoot.demo.entities.Produit;
+import com.eshopJPASpringBoot.demo.exceptions.FournisseurException;
+import com.eshopJPASpringBoot.demo.exceptions.NotFoundException;
+import com.eshopJPASpringBoot.demo.exceptions.ReferenceNullException;
 import com.eshopJPASpringBoot.demo.repositories.DaoFournisseur;
-import com.eshopJPASpringBoot.exceptions.FournisseurException;
-import com.eshopJPASpringBoot.exceptions.ReferenceNullException;
-import com.eshopJPASpringBoot.exceptions.NotFoundException;
 
 @Service
 public class FournisseurSerivce {

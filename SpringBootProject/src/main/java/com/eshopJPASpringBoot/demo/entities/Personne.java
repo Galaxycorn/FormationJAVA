@@ -18,7 +18,7 @@ public class Personne {
     @Id
     @Column(name = "personne_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private int id;
 
     @Column(name = "personne_nom")
     protected String nom;
@@ -34,9 +34,11 @@ public class Personne {
         this.mail = mail;
         this.telephone = telephone;
     }
-    public Personne(){
-        
+
+    public Personne() {
+
     }
+
     public int getId() {
         return this.id;
     }

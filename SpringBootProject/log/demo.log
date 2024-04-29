@@ -1,0 +1,274 @@
+2024-04-29T10:13:43.424+02:00  INFO 34072 --- [formationSpringBoot] [main] c.e.demo.ClientServiceTest               : Starting ClientServiceTest using Java 17.0.7 with PID 34072 (started by julian in C:\Users\julia\Documents\Formation\TP SPRING WEB SERVICES\TP1\SpringBootProject)
+2024-04-29T10:13:43.426+02:00  INFO 34072 --- [formationSpringBoot] [main] c.e.demo.ClientServiceTest               : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T10:13:43.721+02:00  INFO 34072 --- [formationSpringBoot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T10:13:43.781+02:00  INFO 34072 --- [formationSpringBoot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 8 JPA repository interfaces.
+2024-04-29T10:13:44.087+02:00  INFO 34072 --- [formationSpringBoot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-29T10:13:44.142+02:00  INFO 34072 --- [formationSpringBoot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-29T10:13:44.173+02:00  INFO 34072 --- [formationSpringBoot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-29T10:13:44.397+02:00  INFO 34072 --- [formationSpringBoot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-29T10:13:44.425+02:00  INFO 34072 --- [formationSpringBoot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T10:13:44.673+02:00  INFO 34072 --- [formationSpringBoot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2baac4a7
+2024-04-29T10:13:44.674+02:00  INFO 34072 --- [formationSpringBoot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T10:13:44.712+02:00  WARN 34072 --- [formationSpringBoot] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-29T10:13:45.671+02:00  INFO 34072 --- [formationSpringBoot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-29T10:13:46.358+02:00  INFO 34072 --- [formationSpringBoot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29T10:13:46.616+02:00  INFO 34072 --- [formationSpringBoot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-29T10:13:47.030+02:00  INFO 34072 --- [formationSpringBoot] [main] c.e.demo.ClientServiceTest               : Started ClientServiceTest in 3.849 seconds (process running for 4.566)
+2024-04-29T10:13:47.389+02:00  INFO 34072 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:13:47.447+02:00  INFO 34072 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Client supprimé :{ id='1', prenom='julian', nom='gaillard'}
+2024-04-29T10:13:47.472+02:00  INFO 34072 --- [formationSpringBoot] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29T10:13:47.473+02:00  INFO 34072 --- [formationSpringBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T10:13:47.479+02:00  INFO 34072 --- [formationSpringBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-29T10:13:51.815+02:00  INFO 22352 --- [formationSpringBoot] [main] c.e.demo.ClientServiceTest               : Starting ClientServiceTest using Java 17.0.7 with PID 22352 (started by julian in C:\Users\julia\Documents\Formation\TP SPRING WEB SERVICES\TP1\SpringBootProject)
+2024-04-29T10:13:51.816+02:00  INFO 22352 --- [formationSpringBoot] [main] c.e.demo.ClientServiceTest               : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T10:13:52.133+02:00  INFO 22352 --- [formationSpringBoot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T10:13:52.192+02:00  INFO 22352 --- [formationSpringBoot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 8 JPA repository interfaces.
+2024-04-29T10:13:52.527+02:00  INFO 22352 --- [formationSpringBoot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-29T10:13:52.587+02:00  INFO 22352 --- [formationSpringBoot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-29T10:13:52.625+02:00  INFO 22352 --- [formationSpringBoot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-29T10:13:52.877+02:00  INFO 22352 --- [formationSpringBoot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-29T10:13:52.905+02:00  INFO 22352 --- [formationSpringBoot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T10:13:53.157+02:00  INFO 22352 --- [formationSpringBoot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10618775
+2024-04-29T10:13:53.159+02:00  INFO 22352 --- [formationSpringBoot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T10:13:53.198+02:00  WARN 22352 --- [formationSpringBoot] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-29T10:13:54.151+02:00  INFO 22352 --- [formationSpringBoot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-29T10:13:54.859+02:00  INFO 22352 --- [formationSpringBoot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29T10:13:55.173+02:00  INFO 22352 --- [formationSpringBoot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-29T10:13:55.608+02:00  INFO 22352 --- [formationSpringBoot] [main] c.e.demo.ClientServiceTest               : Started ClientServiceTest in 4.083 seconds (process running for 4.805)
+2024-04-29T10:13:56.020+02:00  INFO 22352 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:13:56.172+02:00  INFO 22352 --- [formationSpringBoot] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29T10:13:56.173+02:00  INFO 22352 --- [formationSpringBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T10:13:56.179+02:00  INFO 22352 --- [formationSpringBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-29T10:15:52.416+02:00  INFO 30768 --- [formationSpringBoot] [main] c.e.demo.FournisseurServiceTest          : Starting FournisseurServiceTest using Java 17.0.7 with PID 30768 (started by julian in C:\Users\julia\Documents\Formation\TP SPRING WEB SERVICES\TP1\SpringBootProject)
+2024-04-29T10:15:52.418+02:00  INFO 30768 --- [formationSpringBoot] [main] c.e.demo.FournisseurServiceTest          : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T10:15:52.729+02:00  INFO 30768 --- [formationSpringBoot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T10:15:52.784+02:00  INFO 30768 --- [formationSpringBoot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 8 JPA repository interfaces.
+2024-04-29T10:15:53.088+02:00  INFO 30768 --- [formationSpringBoot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-29T10:15:53.148+02:00  INFO 30768 --- [formationSpringBoot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-29T10:15:53.184+02:00  INFO 30768 --- [formationSpringBoot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-29T10:15:53.416+02:00  INFO 30768 --- [formationSpringBoot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-29T10:15:53.443+02:00  INFO 30768 --- [formationSpringBoot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T10:15:53.695+02:00  INFO 30768 --- [formationSpringBoot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2776fd8f
+2024-04-29T10:15:53.696+02:00  INFO 30768 --- [formationSpringBoot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T10:15:53.734+02:00  WARN 30768 --- [formationSpringBoot] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-29T10:15:54.667+02:00  INFO 30768 --- [formationSpringBoot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-29T10:15:55.317+02:00  INFO 30768 --- [formationSpringBoot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29T10:15:55.601+02:00  INFO 30768 --- [formationSpringBoot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-29T10:15:56.043+02:00  INFO 30768 --- [formationSpringBoot] [main] c.e.demo.FournisseurServiceTest          : Started FournisseurServiceTest in 3.867 seconds (process running for 4.581)
+2024-04-29T10:15:56.471+02:00 ERROR 30768 --- [formationSpringBoot] [main] c.e.demo.services.FournisseurSerivce     : fournisseur null
+2024-04-29T10:15:56.537+02:00  INFO 30768 --- [formationSpringBoot] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29T10:15:56.540+02:00  INFO 30768 --- [formationSpringBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T10:15:56.546+02:00  INFO 30768 --- [formationSpringBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-29T10:19:07.386+02:00  INFO 30020 --- [formationSpringBoot] [main] c.e.demo.ClientServiceTest               : Starting ClientServiceTest using Java 17.0.7 with PID 30020 (started by julian in C:\Users\julia\Documents\Formation\TP SPRING WEB SERVICES\TP1\SpringBootProject)
+2024-04-29T10:19:07.388+02:00  INFO 30020 --- [formationSpringBoot] [main] c.e.demo.ClientServiceTest               : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T10:19:07.717+02:00  INFO 30020 --- [formationSpringBoot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T10:19:07.778+02:00  INFO 30020 --- [formationSpringBoot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 8 JPA repository interfaces.
+2024-04-29T10:19:08.110+02:00  INFO 30020 --- [formationSpringBoot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-29T10:19:08.184+02:00  INFO 30020 --- [formationSpringBoot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-29T10:19:08.267+02:00  INFO 30020 --- [formationSpringBoot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-29T10:19:08.525+02:00  INFO 30020 --- [formationSpringBoot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-29T10:19:08.554+02:00  INFO 30020 --- [formationSpringBoot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T10:19:08.835+02:00  INFO 30020 --- [formationSpringBoot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@720f56e2
+2024-04-29T10:19:08.837+02:00  INFO 30020 --- [formationSpringBoot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T10:19:08.877+02:00  WARN 30020 --- [formationSpringBoot] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-29T10:19:09.905+02:00  INFO 30020 --- [formationSpringBoot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-29T10:19:10.631+02:00  INFO 30020 --- [formationSpringBoot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29T10:19:10.931+02:00  INFO 30020 --- [formationSpringBoot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-29T10:19:11.370+02:00  INFO 30020 --- [formationSpringBoot] [main] c.e.demo.ClientServiceTest               : Started ClientServiceTest in 4.241 seconds (process running for 5.049)
+2024-04-29T10:19:11.765+02:00  INFO 30020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:19:11.810+02:00  INFO 30020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='test1', nom='test2'}
+2024-04-29T10:19:11.812+02:00  INFO 30020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='test1', nom='test2'}
+2024-04-29T10:19:11.916+02:00  INFO 30020 --- [formationSpringBoot] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29T10:19:11.917+02:00  INFO 30020 --- [formationSpringBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T10:19:11.924+02:00  INFO 30020 --- [formationSpringBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-29T10:19:55.744+02:00  INFO 7104 --- [formationSpringBoot] [main] c.e.demo.ClientServiceTest               : Starting ClientServiceTest using Java 17.0.7 with PID 7104 (started by julian in C:\Users\julia\Documents\Formation\TP SPRING WEB SERVICES\TP1\SpringBootProject)
+2024-04-29T10:19:55.745+02:00  INFO 7104 --- [formationSpringBoot] [main] c.e.demo.ClientServiceTest               : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T10:19:56.033+02:00  INFO 7104 --- [formationSpringBoot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T10:19:56.089+02:00  INFO 7104 --- [formationSpringBoot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 8 JPA repository interfaces.
+2024-04-29T10:19:56.399+02:00  INFO 7104 --- [formationSpringBoot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-29T10:19:56.457+02:00  INFO 7104 --- [formationSpringBoot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-29T10:19:56.495+02:00  INFO 7104 --- [formationSpringBoot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-29T10:19:56.732+02:00  INFO 7104 --- [formationSpringBoot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-29T10:19:56.761+02:00  INFO 7104 --- [formationSpringBoot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T10:19:57.003+02:00  INFO 7104 --- [formationSpringBoot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b506ed0
+2024-04-29T10:19:57.004+02:00  INFO 7104 --- [formationSpringBoot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T10:19:57.040+02:00  WARN 7104 --- [formationSpringBoot] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-29T10:19:57.970+02:00  INFO 7104 --- [formationSpringBoot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-29T10:19:58.704+02:00  INFO 7104 --- [formationSpringBoot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29T10:19:58.961+02:00  INFO 7104 --- [formationSpringBoot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-29T10:19:59.510+02:00  INFO 7104 --- [formationSpringBoot] [main] c.e.demo.ClientServiceTest               : Started ClientServiceTest in 4.013 seconds (process running for 4.724)
+2024-04-29T10:19:59.959+02:00  INFO 7104 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:20:00.017+02:00  INFO 7104 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Update client :{ id='1', prenom='julian', nom='plus julian'}
+2024-04-29T10:20:00.036+02:00  INFO 7104 --- [formationSpringBoot] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29T10:20:00.037+02:00  INFO 7104 --- [formationSpringBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T10:20:00.043+02:00  INFO 7104 --- [formationSpringBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-29T10:20:07.213+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.ClientServiceTest               : Starting ClientServiceTest using Java 17.0.7 with PID 21020 (started by julian in C:\Users\julia\Documents\Formation\TP SPRING WEB SERVICES\TP1\SpringBootProject)
+2024-04-29T10:20:07.215+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.ClientServiceTest               : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T10:20:07.763+02:00  INFO 21020 --- [formationSpringBoot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T10:20:07.880+02:00  INFO 21020 --- [formationSpringBoot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 8 JPA repository interfaces.
+2024-04-29T10:20:08.350+02:00  INFO 21020 --- [formationSpringBoot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-29T10:20:08.443+02:00  INFO 21020 --- [formationSpringBoot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-29T10:20:08.495+02:00  INFO 21020 --- [formationSpringBoot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-29T10:20:08.892+02:00  INFO 21020 --- [formationSpringBoot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-29T10:20:08.933+02:00  INFO 21020 --- [formationSpringBoot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T10:20:09.330+02:00  INFO 21020 --- [formationSpringBoot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8b24111
+2024-04-29T10:20:09.333+02:00  INFO 21020 --- [formationSpringBoot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T10:20:09.402+02:00  WARN 21020 --- [formationSpringBoot] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-29T10:20:10.788+02:00  INFO 21020 --- [formationSpringBoot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-29T10:20:11.470+02:00  INFO 21020 --- [formationSpringBoot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29T10:20:11.821+02:00  INFO 21020 --- [formationSpringBoot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-29T10:20:12.431+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.ClientServiceTest               : Started ClientServiceTest in 5.601 seconds (process running for 6.85)
+2024-04-29T10:20:12.856+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='GROS TEST', nom='PETIT NOM'}
+2024-04-29T10:20:13.057+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:20:13.071+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Client supprimé :{ id='2', prenom='julian', nom='gaillard'}
+2024-04-29T10:20:13.081+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:20:13.097+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:20:13.102+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Update client :{ id='4', prenom='julian', nom='plus julian'}
+2024-04-29T10:20:13.107+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:20:13.111+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='mathis', nom='Coiraton'}
+2024-04-29T10:20:13.113+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='Clément', nom='Hinz'}
+2024-04-29T10:20:13.123+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:20:13.131+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:20:13.133+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='test1', nom='test2'}
+2024-04-29T10:20:13.133+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='test1', nom='test2'}
+2024-04-29T10:20:13.157+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:20:13.171+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:20:13.175+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Client supprimé :{ id='12', prenom='julian', nom='gaillard'}
+2024-04-29T10:20:13.180+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:20:13.199+02:00  INFO 21020 --- [formationSpringBoot] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.eshopJPASpringBoot.demo.CommandeServiceTest]: CommandeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-04-29T10:20:13.201+02:00  INFO 21020 --- [formationSpringBoot] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.eshopJPASpringBoot.demo.DemoApplication for test class com.eshopJPASpringBoot.demo.CommandeServiceTest
+2024-04-29T10:20:13.209+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='Michel', nom='Michel'}
+2024-04-29T10:20:13.213+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création d'une commande avec {{ numero='null', nom='Test1', prix='87.9'}=1000}
+2024-04-29T10:20:13.231+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='Michel', nom='Michel'}
+2024-04-29T10:20:13.234+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création d'une commande avec {{ numero='null', nom='Test1', prix='87.9'}=1000}
+2024-04-29T10:20:13.245+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='Michel', nom='Michel'}
+2024-04-29T10:20:13.247+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création d'une commande avec {{ numero='null', nom='Test1', prix='87.9'}=1000}
+2024-04-29T10:20:13.255+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='Michel', nom='Michel'}
+2024-04-29T10:20:13.257+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création d'une commande avec {{ numero='null', nom='Test1', prix='87.9'}=1000}
+2024-04-29T10:20:13.259+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Client supprimé :{ id='4', client='{ id='17', prenom='Michel', nom='Michel'}', date='2024-04-29'}
+2024-04-29T10:20:13.268+02:00  INFO 21020 --- [formationSpringBoot] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.eshopJPASpringBoot.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-04-29T10:20:13.270+02:00  INFO 21020 --- [formationSpringBoot] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.eshopJPASpringBoot.demo.DemoApplication for test class com.eshopJPASpringBoot.demo.DemoApplicationTests
+2024-04-29T10:20:13.279+02:00  INFO 21020 --- [formationSpringBoot] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.eshopJPASpringBoot.demo.FournisseurServiceTest]: FournisseurServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-04-29T10:20:13.280+02:00  INFO 21020 --- [formationSpringBoot] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.eshopJPASpringBoot.demo.DemoApplication for test class com.eshopJPASpringBoot.demo.FournisseurServiceTest
+2024-04-29T10:20:13.332+02:00  INFO 21020 --- [formationSpringBoot] [main] c.e.demo.services.FournisseurSerivce     : Update fournisseur :{ id='21', nom='nomModif', produits='null', adresse='null'}
+2024-04-29T10:20:13.353+02:00 ERROR 21020 --- [formationSpringBoot] [main] c.e.demo.services.FournisseurSerivce     : fournisseur null
+2024-04-29T10:20:13.387+02:00  INFO 21020 --- [formationSpringBoot] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29T10:20:13.390+02:00  INFO 21020 --- [formationSpringBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T10:20:13.395+02:00  INFO 21020 --- [formationSpringBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-29T10:21:54.943+02:00  INFO 8336 --- [formationSpringBoot] [main] c.e.demo.CategorieServiceTest            : Starting CategorieServiceTest using Java 17.0.7 with PID 8336 (started by julian in C:\Users\julia\Documents\Formation\TP SPRING WEB SERVICES\TP1\SpringBootProject)
+2024-04-29T10:21:54.944+02:00  INFO 8336 --- [formationSpringBoot] [main] c.e.demo.CategorieServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T10:21:55.259+02:00  INFO 8336 --- [formationSpringBoot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T10:21:55.320+02:00  INFO 8336 --- [formationSpringBoot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 8 JPA repository interfaces.
+2024-04-29T10:21:55.643+02:00  INFO 8336 --- [formationSpringBoot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-29T10:21:55.706+02:00  INFO 8336 --- [formationSpringBoot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-29T10:21:55.745+02:00  INFO 8336 --- [formationSpringBoot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-29T10:21:56.004+02:00  INFO 8336 --- [formationSpringBoot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-29T10:21:56.035+02:00  INFO 8336 --- [formationSpringBoot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T10:21:56.299+02:00  INFO 8336 --- [formationSpringBoot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5002fde9
+2024-04-29T10:21:56.301+02:00  INFO 8336 --- [formationSpringBoot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T10:21:56.344+02:00  WARN 8336 --- [formationSpringBoot] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-29T10:21:57.313+02:00  INFO 8336 --- [formationSpringBoot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-29T10:21:58.053+02:00  INFO 8336 --- [formationSpringBoot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29T10:21:58.291+02:00  INFO 8336 --- [formationSpringBoot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-29T10:21:58.759+02:00  INFO 8336 --- [formationSpringBoot] [main] c.e.demo.CategorieServiceTest            : Started CategorieServiceTest in 4.094 seconds (process running for 4.843)
+2024-04-29T10:21:59.266+02:00 ERROR 8336 --- [formationSpringBoot] [main] c.e.demo.services.CategorieService       : categorie null
+2024-04-29T10:21:59.308+02:00  INFO 8336 --- [formationSpringBoot] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29T10:21:59.310+02:00  INFO 8336 --- [formationSpringBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T10:21:59.316+02:00  INFO 8336 --- [formationSpringBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-29T10:22:03.196+02:00  INFO 42788 --- [formationSpringBoot] [main] c.e.demo.ProduitServiceTest              : Starting ProduitServiceTest using Java 17.0.7 with PID 42788 (started by julian in C:\Users\julia\Documents\Formation\TP SPRING WEB SERVICES\TP1\SpringBootProject)
+2024-04-29T10:22:03.197+02:00  INFO 42788 --- [formationSpringBoot] [main] c.e.demo.ProduitServiceTest              : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T10:22:03.512+02:00  INFO 42788 --- [formationSpringBoot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T10:22:03.567+02:00  INFO 42788 --- [formationSpringBoot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 8 JPA repository interfaces.
+2024-04-29T10:22:03.869+02:00  INFO 42788 --- [formationSpringBoot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-29T10:22:03.930+02:00  INFO 42788 --- [formationSpringBoot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-29T10:22:03.965+02:00  INFO 42788 --- [formationSpringBoot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-29T10:22:04.214+02:00  INFO 42788 --- [formationSpringBoot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-29T10:22:04.238+02:00  INFO 42788 --- [formationSpringBoot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T10:22:04.490+02:00  INFO 42788 --- [formationSpringBoot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b506ed0
+2024-04-29T10:22:04.493+02:00  INFO 42788 --- [formationSpringBoot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T10:22:04.532+02:00  WARN 42788 --- [formationSpringBoot] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-29T10:22:05.526+02:00  INFO 42788 --- [formationSpringBoot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-29T10:22:06.283+02:00  INFO 42788 --- [formationSpringBoot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29T10:22:06.581+02:00  INFO 42788 --- [formationSpringBoot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-29T10:22:07.026+02:00  INFO 42788 --- [formationSpringBoot] [main] c.e.demo.ProduitServiceTest              : Started ProduitServiceTest in 4.129 seconds (process running for 4.903)
+2024-04-29T10:22:07.491+02:00  INFO 42788 --- [formationSpringBoot] [main] c.e.demo.services.ProduitService         : Création produit :{ numero='null', nom='Product test', prix='10.1'}
+2024-04-29T10:22:07.635+02:00  INFO 42788 --- [formationSpringBoot] [main] c.e.demo.services.ProduitService         : Création produit :{ numero='null', nom='Product test', prix='10.1'}
+2024-04-29T10:22:07.651+02:00  INFO 42788 --- [formationSpringBoot] [main] c.e.demo.services.ProduitService         : Création produit :{ numero='null', nom='Product test', prix='10.1'}
+2024-04-29T10:22:07.652+02:00  INFO 42788 --- [formationSpringBoot] [main] c.e.demo.services.ProduitService         : Création produit :{ numero='null', nom='Product test2', prix='10.1'}
+2024-04-29T10:22:07.654+02:00  INFO 42788 --- [formationSpringBoot] [main] c.e.demo.services.ProduitService         : Création produit :{ numero='null', nom='Product test3', prix='10.1'}
+2024-04-29T10:22:07.664+02:00  INFO 42788 --- [formationSpringBoot] [main] c.e.demo.services.ProduitService         : Création produit :{ numero='null', nom='Product test', prix='10.1'}
+2024-04-29T10:22:07.668+02:00  INFO 42788 --- [formationSpringBoot] [main] c.e.demo.services.ProduitService         : Update produit :{ numero='6', nom='New Product', prix='10.1'}
+2024-04-29T10:22:07.674+02:00  INFO 42788 --- [formationSpringBoot] [main] c.e.demo.services.ProduitService         : Création produit :{ numero='null', nom='Product test', prix='10.1'}
+2024-04-29T10:22:07.683+02:00  INFO 42788 --- [formationSpringBoot] [main] c.e.demo.services.ProduitService         : Création produit :{ numero='null', nom='Product test', prix='10.1'}
+2024-04-29T10:22:07.689+02:00  INFO 42788 --- [formationSpringBoot] [main] c.e.demo.services.ProduitService         : Delete produit :{ numero='8', nom='Product test', prix='10.1'}
+2024-04-29T10:22:07.702+02:00  INFO 42788 --- [formationSpringBoot] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29T10:22:07.703+02:00  INFO 42788 --- [formationSpringBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T10:22:07.709+02:00  INFO 42788 --- [formationSpringBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-29T10:22:16.759+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.ClientServiceTest               : Starting ClientServiceTest using Java 17.0.7 with PID 10584 (started by julian in C:\Users\julia\Documents\Formation\TP SPRING WEB SERVICES\TP1\SpringBootProject)
+2024-04-29T10:22:16.762+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.ClientServiceTest               : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T10:22:17.253+02:00  INFO 10584 --- [formationSpringBoot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T10:22:17.349+02:00  INFO 10584 --- [formationSpringBoot] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 8 JPA repository interfaces.
+2024-04-29T10:22:17.810+02:00  INFO 10584 --- [formationSpringBoot] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-29T10:22:17.906+02:00  INFO 10584 --- [formationSpringBoot] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-29T10:22:17.966+02:00  INFO 10584 --- [formationSpringBoot] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-29T10:22:18.346+02:00  INFO 10584 --- [formationSpringBoot] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-29T10:22:18.392+02:00  INFO 10584 --- [formationSpringBoot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T10:22:18.793+02:00  INFO 10584 --- [formationSpringBoot] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63ec3626
+2024-04-29T10:22:18.798+02:00  INFO 10584 --- [formationSpringBoot] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T10:22:18.864+02:00  WARN 10584 --- [formationSpringBoot] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-29T10:22:20.335+02:00  INFO 10584 --- [formationSpringBoot] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-29T10:22:21.124+02:00  INFO 10584 --- [formationSpringBoot] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29T10:22:21.535+02:00  INFO 10584 --- [formationSpringBoot] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-29T10:22:22.126+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.ClientServiceTest               : Started ClientServiceTest in 5.794 seconds (process running for 7.196)
+2024-04-29T10:22:22.567+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='GROS TEST', nom='PETIT NOM'}
+2024-04-29T10:22:22.766+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:22:22.779+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Client supprimé :{ id='2', prenom='julian', nom='gaillard'}
+2024-04-29T10:22:22.790+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:22:22.807+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:22:22.812+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Update client :{ id='4', prenom='julian', nom='plus julian'}
+2024-04-29T10:22:22.819+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:22:22.821+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='mathis', nom='Coiraton'}
+2024-04-29T10:22:22.824+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='Clément', nom='Hinz'}
+2024-04-29T10:22:22.837+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:22:22.843+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:22:22.846+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='test1', nom='test2'}
+2024-04-29T10:22:22.846+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='test1', nom='test2'}
+2024-04-29T10:22:22.871+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:22:22.884+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:22:22.886+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Client supprimé :{ id='12', prenom='julian', nom='gaillard'}
+2024-04-29T10:22:22.891+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='julian', nom='gaillard'}
+2024-04-29T10:22:22.908+02:00  INFO 10584 --- [formationSpringBoot] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.eshopJPASpringBoot.demo.CommandeServiceTest]: CommandeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-04-29T10:22:22.909+02:00  INFO 10584 --- [formationSpringBoot] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.eshopJPASpringBoot.demo.DemoApplication for test class com.eshopJPASpringBoot.demo.CommandeServiceTest
+2024-04-29T10:22:22.916+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='Michel', nom='Michel'}
+2024-04-29T10:22:22.920+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création d'une commande avec {{ numero='null', nom='Test1', prix='87.9'}=1000}
+2024-04-29T10:22:22.937+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='Michel', nom='Michel'}
+2024-04-29T10:22:22.939+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création d'une commande avec {{ numero='null', nom='Test1', prix='87.9'}=1000}
+2024-04-29T10:22:22.949+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='Michel', nom='Michel'}
+2024-04-29T10:22:22.952+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création d'une commande avec {{ numero='null', nom='Test1', prix='87.9'}=1000}
+2024-04-29T10:22:22.958+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création client :{ id='0', prenom='Michel', nom='Michel'}
+2024-04-29T10:22:22.961+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Création d'une commande avec {{ numero='null', nom='Test1', prix='87.9'}=1000}
+2024-04-29T10:22:22.963+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ClientService          : Client supprimé :{ id='4', client='{ id='17', prenom='Michel', nom='Michel'}', date='2024-04-29'}
+2024-04-29T10:22:22.971+02:00  INFO 10584 --- [formationSpringBoot] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.eshopJPASpringBoot.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-04-29T10:22:22.971+02:00  INFO 10584 --- [formationSpringBoot] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.eshopJPASpringBoot.demo.DemoApplication for test class com.eshopJPASpringBoot.demo.DemoApplicationTests
+2024-04-29T10:22:22.979+02:00  INFO 10584 --- [formationSpringBoot] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.eshopJPASpringBoot.demo.FournisseurServiceTest]: FournisseurServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-04-29T10:22:22.980+02:00  INFO 10584 --- [formationSpringBoot] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.eshopJPASpringBoot.demo.DemoApplication for test class com.eshopJPASpringBoot.demo.FournisseurServiceTest
+2024-04-29T10:22:23.033+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.FournisseurSerivce     : Update fournisseur :{ id='21', nom='nomModif', produits='null', adresse='null'}
+2024-04-29T10:22:23.057+02:00 ERROR 10584 --- [formationSpringBoot] [main] c.e.demo.services.FournisseurSerivce     : fournisseur null
+2024-04-29T10:22:23.092+02:00  INFO 10584 --- [formationSpringBoot] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.eshopJPASpringBoot.demo.ProduitServiceTest]: ProduitServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-04-29T10:22:23.093+02:00  INFO 10584 --- [formationSpringBoot] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.eshopJPASpringBoot.demo.DemoApplication for test class com.eshopJPASpringBoot.demo.ProduitServiceTest
+2024-04-29T10:22:23.099+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ProduitService         : Création produit :{ numero='null', nom='Product test', prix='10.1'}
+2024-04-29T10:22:23.108+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ProduitService         : Création produit :{ numero='null', nom='Product test', prix='10.1'}
+2024-04-29T10:22:23.116+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ProduitService         : Création produit :{ numero='null', nom='Product test', prix='10.1'}
+2024-04-29T10:22:23.118+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ProduitService         : Création produit :{ numero='null', nom='Product test2', prix='10.1'}
+2024-04-29T10:22:23.120+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ProduitService         : Création produit :{ numero='null', nom='Product test3', prix='10.1'}
+2024-04-29T10:22:23.127+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ProduitService         : Création produit :{ numero='null', nom='Product test', prix='10.1'}
+2024-04-29T10:22:23.130+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ProduitService         : Update produit :{ numero='6', nom='New Product', prix='10.1'}
+2024-04-29T10:22:23.134+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ProduitService         : Création produit :{ numero='null', nom='Product test', prix='10.1'}
+2024-04-29T10:22:23.140+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ProduitService         : Création produit :{ numero='null', nom='Product test', prix='10.1'}
+2024-04-29T10:22:23.141+02:00  INFO 10584 --- [formationSpringBoot] [main] c.e.demo.services.ProduitService         : Delete produit :{ numero='8', nom='Product test', prix='10.1'}
+2024-04-29T10:22:23.149+02:00  INFO 10584 --- [formationSpringBoot] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.eshopJPASpringBoot.demo.CategorieServiceTest]: CategorieServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-04-29T10:22:23.150+02:00  INFO 10584 --- [formationSpringBoot] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.eshopJPASpringBoot.demo.DemoApplication for test class com.eshopJPASpringBoot.demo.CategorieServiceTest
+2024-04-29T10:22:23.171+02:00 ERROR 10584 --- [formationSpringBoot] [main] c.e.demo.services.CategorieService       : categorie null
+2024-04-29T10:22:23.195+02:00  INFO 10584 --- [formationSpringBoot] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-29T10:22:23.196+02:00  INFO 10584 --- [formationSpringBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T10:22:23.203+02:00  INFO 10584 --- [formationSpringBoot] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

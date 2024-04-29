@@ -14,10 +14,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 
 import com.eshopJPASpringBoot.demo.entities.Categorie;
+import com.eshopJPASpringBoot.demo.exceptions.CategorieException;
+import com.eshopJPASpringBoot.demo.exceptions.NotFoundException;
+import com.eshopJPASpringBoot.demo.exceptions.ReferenceNullException;
 import com.eshopJPASpringBoot.demo.services.CategorieService;
-import com.eshopJPASpringBoot.exceptions.CategorieException;
-import com.eshopJPASpringBoot.exceptions.NotFoundException;
-import com.eshopJPASpringBoot.exceptions.ReferenceNullException;
 
 import jakarta.transaction.Transactional;
 
@@ -29,12 +29,12 @@ public class CategorieServiceTest {
     CategorieService categorieService;
 
     @Test
-	void injectionTest() {
+    void injectionTest() {
         assertNotNull(categorieService);
     }
 
     @Test
-    void creationTest(){
+    void creationTest() {
         Categorie cat = new Categorie("testCat");
         categorieService.creationCategorie(cat);
         assertNotNull(cat.getId());
@@ -49,32 +49,32 @@ public class CategorieServiceTest {
     }
 
     @Test
-    void deleteTest(){
+    void deleteTest() {
         Categorie cat = new Categorie("testCatDel");
         categorieService.creationCategorie(cat);
         categorieService.delete(cat.getId());
-        assertThrows(NotFoundException.class,()->categorieService.findById(cat.getId()));
+        assertThrows(NotFoundException.class, () -> categorieService.findById(cat.getId()));
     }
 
     @Test
-    void findByIdTest(){
+    void findByIdTest() {
         Categorie cat = new Categorie("testCat");
         categorieService.creationCategorie(cat);
         assertEquals(categorieService.findById(cat.getId()).getId(), cat.getId());
     }
 
     @Test
-    void getAllTest(){
+    void getAllTest() {
         Categorie cat1 = categorieService.creationCategorie("cat1");
         Categorie cat2 = categorieService.creationCategorie("cat2");
-        List <Categorie> listCat = new ArrayList<Categorie>();
+        List<Categorie> listCat = new ArrayList<Categorie>();
         listCat.add(cat1);
         listCat.add(cat2);
         assertEquals(categorieService.getAll(), listCat);
     }
 
     @Test
-    void exceptionTest(){
+    void exceptionTest() {
         // @formatter:off
         assertAll( "test exception",
             () -> assertThrows(ReferenceNullException.class, () -> {
