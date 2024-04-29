@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 
 import com.eshopJPASpringBoot.demo.entities.Adresse;
 import com.eshopJPASpringBoot.demo.entities.Fournisseur;
-import com.eshopJPASpringBoot.demo.entities.Personne;
 import com.eshopJPASpringBoot.demo.entities.Produit;
 import com.eshopJPASpringBoot.demo.repositories.DaoFournisseur;
 import com.eshopJPASpringBoot.exceptions.FournisseurException;
@@ -31,7 +30,7 @@ public class FournisseurSerivce {
     }
 
     // → creation
-    public Fournisseur creationFournisseur(String nom, List<Produit> produits,Adresse adresse) {
+    public Fournisseur creationFournisseur(String nom, List<Produit> produits, Adresse adresse) {
         logger.trace("création fournisseur avec tout ses attributs");
         return creationFournisseur(new Fournisseur(nom, produits, adresse));
     }
@@ -51,6 +50,7 @@ public class FournisseurSerivce {
 
         return daoFournisseur.save(fournisseur);
     }
+
     // → maj
     public void updateFournisseur(Fournisseur fournisseur) {
         if (fournisseur == null) {
@@ -66,51 +66,54 @@ public class FournisseurSerivce {
         });
         logger.info("Update fournisseur :" + fournisseur);
     }
+
     // → suppression
     public void delete(Integer code) {
-		if (code == null) {
-			throw new ReferenceNullException();
-		}
+        if (code == null) {
+            throw new ReferenceNullException();
+        }
         Optional<Fournisseur> fournisseurSuprimer = daoFournisseur.findById(code);
         logger.debug("suprression de " + fournisseurSuprimer.hashCode());
         daoFournisseur.deleteById(code);
-	}
+    }
+
     // → recherche tel/mail/nom/n° client
-    public List<Fournisseur> findByNom(String nom){
-        if (nom == null || nom.isBlank()){
+    public List<Fournisseur> findByNom(String nom) {
+        if (nom == null || nom.isBlank()) {
             logger.debug("nom vide");
             throw new FournisseurException("nom indiqué invalide");
         }
         return daoFournisseur.findByNomFournisseur(nom);
     }
 
-    public Fournisseur findByMail(String email){
-        if (email == null || email.isBlank()){
+    public Fournisseur findByMail(String email) {
+        if (email == null || email.isBlank()) {
             logger.debug("email vide");
             throw new FournisseurException("email indiqué invalide");
         }
         return daoFournisseur.findByMail(email).orElseThrow(() -> {
-			throw new NotFoundException("fournisseur avec l'email  " + email + " inexistant");
-		});
+            throw new NotFoundException("fournisseur avec l'email  " + email + " inexistant");
+        });
     }
-    public Fournisseur findByTelephone(String telephone){
-        if (telephone == null || telephone.isBlank()){
+
+    public Fournisseur findByTelephone(String telephone) {
+        if (telephone == null || telephone.isBlank()) {
             logger.debug("telephone vide");
             throw new FournisseurException("telephone indiqué invalide");
         }
         return daoFournisseur.findByTelephone(telephone).orElseThrow(() -> {
-			throw new NotFoundException("fournisseur avec le numero de telephone  " + telephone + " inexistant");
-		});
+            throw new NotFoundException("fournisseur avec le numero de telephone  " + telephone + " inexistant");
+        });
     }
 
-    public Fournisseur findById(Integer integer){
+    public Fournisseur findById(Integer integer) {
         return daoFournisseur.findById(integer.intValue()).orElseThrow(() -> {
-			throw new NotFoundException("fournisseur avec l'id  " + integer + " inexistant");
-		});
+            throw new NotFoundException("fournisseur avec l'id  " + integer + " inexistant");
+        });
     }
 
     // → Tous les fournisseurs
-    public List<Fournisseur> getAll(){
+    public List<Fournisseur> getAll() {
         return daoFournisseur.findAll();
     }
     //

@@ -12,7 +12,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 
 import com.eshopJPASpringBoot.demo.entities.Fournisseur;
-import com.eshopJPASpringBoot.demo.entities.Personne;
 import com.eshopJPASpringBoot.demo.services.FournisseurSerivce;
 import com.eshopJPASpringBoot.exceptions.FournisseurException;
 import com.eshopJPASpringBoot.exceptions.NotFoundException;
@@ -28,12 +27,12 @@ public class FournisseurServiceTest {
     FournisseurSerivce fournisseurSerivce;
 
     @Test
-	void injectionTest() {
+    void injectionTest() {
         assertNotNull(fournisseurSerivce);
     }
 
     @Test
-    void insertTest(){
+    void insertTest() {
         Fournisseur f = new Fournisseur("fourni test", null, null);
         fournisseurSerivce.creationFournisseur(f);
         assertNotNull(f.getFournisseurId());
@@ -47,10 +46,9 @@ public class FournisseurServiceTest {
         assertEquals(f.getProduits(), fourniEnBase.getProduits());
     }
 
-    
-	@Test
-	void exceptionTest() {
-		// @formatter:off
+    @Test
+    void exceptionTest() {
+        // @formatter:off
 		assertAll("test exception",
 						()->assertThrows(ReferenceNullException.class, () -> {
 								fournisseurSerivce.creationFournisseur(null);
@@ -64,10 +62,10 @@ public class FournisseurServiceTest {
 						}));
 		// @formatter:on
 
-	}
+    }
 
     @Test
-    void deleteTest(){
+    void deleteTest() {
         Fournisseur f = fournisseurSerivce.creationFournisseur("testDel", null, null);
         Integer id = f.getFournisseurId();
         fournisseurSerivce.delete(id);
@@ -75,7 +73,7 @@ public class FournisseurServiceTest {
     }
 
     @Test
-    void updateTest(){
+    void updateTest() {
         Fournisseur f = fournisseurSerivce.creationFournisseur("nom", null, null);
         Fournisseur fSansUpdate = new Fournisseur();
         fSansUpdate.setNom(f.getNom());
@@ -85,33 +83,37 @@ public class FournisseurServiceTest {
     }
 
     @Test
-    void findByIdTest(){
+    void findByIdTest() {
         Fournisseur f = fournisseurSerivce.creationFournisseur("nom", null, null);
         Integer id = f.getFournisseurId();
         assertEquals(fournisseurSerivce.findById(id).getFournisseurId(), id);
     }
+
     @Test
-    void findByTelephoneTest(){
+    void findByTelephoneTest() {
         Fournisseur f = fournisseurSerivce.creationFournisseur("nom", null, null);
         f.setTelephone("0783516196");
         String tel = f.getTelephone();
         assertEquals(fournisseurSerivce.findByTelephone(tel).getTelephone(), tel);
     }
+
     @Test
-    void findByIdMailTest(){
+    void findByIdMailTest() {
         Fournisseur f = fournisseurSerivce.creationFournisseur("nom", null, null);
         f.setMail("m@mail.com");
         String mail = f.getMail();
         assertEquals(fournisseurSerivce.findByMail(mail).getMail(), mail);
     }
+
     @Test
-    void findByNomTest(){
-    Fournisseur f = fournisseurSerivce.creationFournisseur("nom", null, null);
-    assertEquals(fournisseurSerivce.findByNom("nom").get(0), f);
+    void findByNomTest() {
+        Fournisseur f = fournisseurSerivce.creationFournisseur("nom", null, null);
+        assertEquals(fournisseurSerivce.findByNom("nom").get(0), f);
     }
+
     @Test
-    void findAllTest(){
-        Fournisseur f = fournisseurSerivce.creationFournisseur("nom", null,  null);
+    void findAllTest() {
+        Fournisseur f = fournisseurSerivce.creationFournisseur("nom", null, null);
         assertEquals(fournisseurSerivce.getAll().get(0), f);
     }
 

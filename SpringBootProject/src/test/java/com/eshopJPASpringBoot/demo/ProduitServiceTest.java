@@ -10,8 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 
-import com.eshopJPASpringBoot.demo.entities.Adresse;
-import com.eshopJPASpringBoot.demo.entities.Client;
 import com.eshopJPASpringBoot.demo.entities.Produit;
 import com.eshopJPASpringBoot.demo.exceptions.NotFoundException;
 import com.eshopJPASpringBoot.demo.services.ProduitService;
@@ -22,10 +20,10 @@ import jakarta.transaction.Transactional;
 @Transactional
 @Rollback
 public class ProduitServiceTest {
-	
+
 	@Autowired
 	ProduitService produitSrv;
-	
+
 	@Test
 	void insertTest() {
 		Produit p = new Produit("Product test", 10.10, "Super produit");
@@ -39,22 +37,22 @@ public class ProduitServiceTest {
 		assertEquals(p.getDescription(), produitEnBase.getDescription());
 		assertEquals(p.getPrix(), produitEnBase.getPrix());
 	}
-	
+
 	@Test
 	void updateTest() {
 		Produit p = new Produit("Product test", 10.10, "Super produit");
 		produitSrv.creationProduit(p);
-		
+
 		p.setNom("New Product");
 		produitSrv.updateProduit(p);
 		System.out.println(p.toString());
-		 
+
 		Produit produitUpdated = produitSrv.findByNumero(p.getNumero());
-        System.out.println(produitUpdated.toString());
-        assertNotNull(produitUpdated);
-        assertEquals("New Product", produitUpdated.getNom());
+		System.out.println(produitUpdated.toString());
+		assertNotNull(produitUpdated);
+		assertEquals("New Product", produitUpdated.getNom());
 	}
-	
+
 	@Test
 	void deleteTest() {
 		Produit p = new Produit("Product test", 10.10, "Super produit");
@@ -63,7 +61,7 @@ public class ProduitServiceTest {
 		produitSrv.deleteProduit(p);
 		assertThrows(NotFoundException.class, () -> produitSrv.findByNumero(p.getNumero()));
 	}
-	
+
 	@Test
 	void findAll() {
 		Produit p1 = new Produit("Product test", 10.10, "Super produit");
@@ -84,7 +82,7 @@ public class ProduitServiceTest {
 		assertEquals(p3, produitsBddList.get(2));
 
 	}
-	
+
 	@Test
 	void getByIdTest() {
 		Produit p1 = new Produit("Product test", 10.10, "Super produit");
@@ -93,7 +91,7 @@ public class ProduitServiceTest {
 
 		assertEquals(p1, produitSrv.findByNumero(p1.getNumero()));
 	}
-	
+
 	@Test
 	void getByNomTest() {
 		Produit p1 = new Produit("Product test", 10.10, "Super produit");

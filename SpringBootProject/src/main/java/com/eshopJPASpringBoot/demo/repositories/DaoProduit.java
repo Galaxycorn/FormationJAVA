@@ -12,7 +12,7 @@ import java.util.Optional;
 public interface DaoProduit extends JpaRepository<Produit, Long> {
 
     List<Produit> findByNomContaining(String nom);
-    
+
     Produit findByNumero(Long numero);
 
     List<Produit> findByFournisseur(Fournisseur fournisseur);
@@ -20,7 +20,8 @@ public interface DaoProduit extends JpaRepository<Produit, Long> {
     List<Produit> findByCategorie(Categorie categorie);
 
     Optional<Produit> findByPrixBetween(double min, double max);
-    
+
+    @SuppressWarnings("null")
     List<Produit> findAll();
 
 }
