@@ -11,15 +11,16 @@ import com.eshopJPASpringBoot.demo.entities.Fournisseur;
 
 public interface DaoFournisseur extends JpaRepository<Fournisseur, Integer> {
 
-    List<Fournisseur> findByNomContaining(String nom);
+    List<Fournisseur> findByNomFournisseur(String nomFournisseur);
+    
+    Optional<Fournisseur> findByMail(String mail);
 
-    // List<Fournisseur> findByVille(String ville);
-
-    // Optional<Fournisseur> findByMail(String email);
-
-    // Optional<Fournisseur> findByTelephone(String telephone);
+    Optional<Fournisseur> findByTelephone(String telephone);
 
     @Query("select f from Fournisseur f left join fetch f.produits where f.id=:id")
     Optional<Fournisseur> findByIdFetchProduit(@Param("id") Long id);
 
+    @Query("select f from Fournisseur f left join fetch f.adresse a where a.ville=:ville")
+    List<Fournisseur> findByVille(@Param("ville") String ville);
+    
 }
