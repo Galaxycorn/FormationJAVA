@@ -24,6 +24,9 @@ public class ProduitService {
 	@Autowired
 	private DaoProduit daoProduit;
 
+	@Autowired
+	private FournisseurSerivce fournisseurSerivce;
+
 	public Produit creationProduit(String nom, Double prix, String description, String photo, Fournisseur fournisseur,
 			Categorie categorie) {
 		if (prix > 0) {
@@ -46,7 +49,7 @@ public class ProduitService {
 		if (produit.getNom() == null || produit.getNom().isBlank()) {
 			throw new ProduitException("Manque un nom");
 		}
-		logger.info("Création produit :" + produit);
+		logger.info("Création produit : {}", produit);
 		return daoProduit.save(produit);
 
 	}
@@ -65,11 +68,11 @@ public class ProduitService {
 			produit.setCategorie(categorie);
 			daoProduit.save(produit);
 		}
-		logger.info("Update produit :" + produit);
+		logger.info("Update produit : {}", produit);
 
 	}
 
-	public void updateProduit(Produit produit) {
+	public Produit updateProduit(Produit produit) {
 		if (produit == null) {
 			throw new ReferenceNullException();
 		}
@@ -83,7 +86,8 @@ public class ProduitService {
 
 			daoProduit.save(produitUpdated);
 		});
-		logger.info("Update produit :" + produit);
+		logger.info("Update produit : {}", produit);
+		return produit;
 
 	}
 
@@ -91,7 +95,7 @@ public class ProduitService {
 		if (produit != null) {
 			daoProduit.delete(produit);
 		}
-		logger.info("Delete produit :" + produit);
+		logger.info("Delete produit : {}", produit);
 	}
 
 	public Produit findByNumero(Long code) {
@@ -117,6 +121,19 @@ public class ProduitService {
 		if (nom == null || nom.isBlank())
 			throw new ReferenceNullException();
 		return daoProduit.findByNomContaining(nom);
+	}
+
+	public void checkFournisseur(Produit produit, Fournisseur fournisseur) {
+		if (produit == null || fournisseur == null)
+			throw new ReferenceNullException();
+		fournisseurSerivce.findById(fournisseur.getId());
+		this.findByNumero(produit.getNumero());
+	}
+
+	public void ajouterFournisseur(Produit produit, Fournisseur fournisseur) {
+		checkFournisseur(produit, fournisseur);
+		produit.setFournisseur(fournisseur);
+		daoProduit.save(produit);
 	}
 
 }

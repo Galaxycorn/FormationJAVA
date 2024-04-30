@@ -26,7 +26,7 @@ public class Fournisseur extends Personne {
     @Column(name = "founisseur_nom")
     private String nomFournisseur;
 
-    @OneToMany(mappedBy = "fournisseur", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "fournisseur")
     private List<Produit> produits;
 
     @OneToOne()

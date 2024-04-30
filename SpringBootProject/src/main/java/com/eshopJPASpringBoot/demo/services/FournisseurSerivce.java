@@ -52,7 +52,7 @@ public class FournisseurSerivce {
     }
 
     // → maj
-    public void updateFournisseur(Fournisseur fournisseur) {
+    public Fournisseur updateFournisseur(Fournisseur fournisseur) {
         if (fournisseur == null) {
             throw new ReferenceNullException();
         }
@@ -64,7 +64,9 @@ public class FournisseurSerivce {
             fournisseurUpdated.setNomFournisseur(fournisseur.getNomFournisseur());
             daoFournisseur.save(fournisseurUpdated);
         });
-        logger.info("Update fournisseur :" + fournisseur);
+        logger.info("Update fournisseur : {}", fournisseur);
+        return fournisseur;
+
     }
 
     // → suppression
@@ -109,6 +111,14 @@ public class FournisseurSerivce {
     public Fournisseur findById(Integer integer) {
         return daoFournisseur.findById(integer.intValue()).orElseThrow(() -> {
             throw new NotFoundException("fournisseur avec l'id  " + integer + " inexistant");
+        });
+    }
+
+    public Fournisseur findByIdWithProduit(Long id) {
+        if (id == null)
+            throw new ReferenceNullException();
+        return daoFournisseur.findByIdFetchProduit(id).orElseThrow(() -> {
+            throw new NotFoundException("Fournisseur " + id + " inexsitant");
         });
     }
 

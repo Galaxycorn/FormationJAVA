@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ForeignKey;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
@@ -38,7 +39,7 @@ public class Produit {
     private Set<LigneCommande> ligneCommandes;
 
     @ManyToOne
-    @JoinColumn(name = "fournisseur_id")
+    @JoinColumn(name = "fournisseur_id", foreignKey = @ForeignKey(name = "produit_frs_id_fk"))
     private Fournisseur fournisseur;
 
     @ManyToOne
@@ -52,25 +53,24 @@ public class Produit {
         this.nom = nom;
         this.prix = prix;
     }
-    
 
     public Produit(String nom, double prix, String description) {
-		this.nom = nom;
-		this.prix = prix;
-		this.description = description;
-	}
+        this.nom = nom;
+        this.prix = prix;
+        this.description = description;
+    }
 
-	public Produit(String nom, double prix, String description, String photo, Fournisseur fournisseur,
-			Categorie categorie) {
-		this.nom = nom;
-		this.prix = prix;
-		this.description = description;
-		this.photo = photo;
-		this.fournisseur = fournisseur;
-		this.categorie = categorie;
-	}
+    public Produit(String nom, double prix, String description, String photo, Fournisseur fournisseur,
+            Categorie categorie) {
+        this.nom = nom;
+        this.prix = prix;
+        this.description = description;
+        this.photo = photo;
+        this.fournisseur = fournisseur;
+        this.categorie = categorie;
+    }
 
-	public Long getNumero() {
+    public Long getNumero() {
         return this.numero;
     }
 
